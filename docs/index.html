@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Multi-Agent Workflow Engine — Router, agents, MCP tools, human-in-the-loop</title>
+<meta name="description" content="A multi-agent workflow engine for business operations: one router, four specialist agents, every tool through MCP, and a human approves every money move.">
+<meta property="og:title" content="AI Multi-Agent Workflow Engine">
+<meta property="og:description" content="One router. Four specialist agents. Every tool through MCP. Every financial action paused for a human.">
+<meta property="og:image" content="social-preview.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">◈</div>
+    <div class="name">AI Multi-Agent Workflow Engine</div>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#agents">Agents</a>
+      <a href="#safety">Safety</a>
+      <a href="#evals">Results</a>
+      <a href="#try">Try it</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="badge">LangGraph · FastAPI · MCP</span>
+    <h1>AI Multi-Agent<br><span>Workflow Engine</span></h1>
+    <p class="lede">You type a business request in plain English. A <b>router</b> figures out what kind of job it is, sends it to the right <b>specialist agent</b>, and that agent does the work using a shared set of <b>tools</b>. If the job involves money, everything <b>stops and waits for a human</b> before anything is paid. That is the whole idea.</p>
+    <div class="cta">
+      <a class="btn primary" href="#try">Run it in one command →</a>
+      <a class="btn" href="https://github.com/ProNoob-Dev/ai-multi-agent-workflow-engine">View on GitHub</a>
+    </div>
+    <div class="stats">
+      <div><b>85.0%</b> autonomous resolution*</div>
+      <div><b>100%</b> routing accuracy*</div>
+      <div><b>20</b> golden-set eval cases</div>
+      <div><b>0</b> payments without approval</div>
+    </div>
+    <p style="font-size:13px;margin-top:16px">* Measured by <code>python -m app.eval</code> on this repo's 20-case golden set. See <a href="#evals">results</a>.</p>
+  </div>
+</section>
+
+<section id="what">
+  <div class="wrap">
+    <h2>What is this, in plain English?</h2>
+    <p class="sub">No jargon needed. Here is the idea in three sentences.</p>
+    <div class="plain">
+      <div class="card">
+        <div class="icon">🏢</div>
+        <h3>The problem</h3>
+        <p>Business teams get the same requests all day: <i>“Is this invoice real?”</i>, <i>“What do we owe this vendor?”</i>, <i>“What is the leave policy?”</i> Answering them by hand is slow, and letting an AI pay invoices on its own is dangerous.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>The idea</h3>
+        <p>Split the work between <b>specialists</b>. One agent only handles invoices, one only writes reports, one only looks up data, one only answers policy questions. A router sends each request to the right specialist, and every specialist uses the same toolbox.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h3>The safety net</h3>
+        <p>Reading is free, paying is not. Anything that moves money <b>pauses for a human</b> — the system literally cannot pay without an approval. And if a multi-step job fails halfway, it <b>undoes the steps it already did</b>, so nothing is left half-finished.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="alt">
+  <div class="wrap">
+    <h2>How it works, step by step</h2>
+    <p class="sub">The animation starts when you scroll here. Click any step to highlight it in the diagram.</p>
+
+    <div class="diagram-box">
+      <!-- Inline copy of docs/workflow-diagram.svg, with node ids for highlighting. -->
+      <svg id="flow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" role="img" aria-label="Workflow diagram: request flows from router to domain agents, through MCP tools, pauses at the human gate, and reaches a result">
+        <defs>
+          <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#7c5cff"/><stop offset="0.55" stop-color="#38bdf8"/><stop offset="1" stop-color="#22d3ee"/>
+          </linearGradient>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/></marker>
+          <marker id="arrowAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/></marker>
+        </defs>
+        <rect x="2" y="2" width="1196" height="466" rx="20" fill="#0a0f1e" stroke="#1e293b"/>
+        <text x="600" y="52" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="26" font-weight="700" fill="#e8ecf4">How a request flows through the engine</text>
+        <text x="600" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#8b98ad">One request in. One verified result out. A human steps in only when money is involved.</text>
+        <g stroke="#475569" stroke-width="2" fill="none">
+          <path id="c1" d="M 190 225 H 222" marker-end="url(#arrow)"/>
+          <path id="c2" d="M 376 225 H 408" marker-end="url(#arrow)"/>
+          <path id="c3" d="M 602 225 H 634" marker-end="url(#arrow)"/>
+          <path id="c4" d="M 788 225 H 820" marker-end="url(#arrow)"/>
+          <path id="c5" d="M 974 225 H 1006" marker-end="url(#arrow)"/>
+        </g>
+        <g fill="#22d3ee">
+          <circle r="5"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#c1"/></animateMotion></circle>
+          <circle r="5"><animateMotion dur="2.4s" begin="0.4s" repeatCount="indefinite"><mpath href="#c2"/></animateMotion></circle>
+          <circle r="5"><animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite"><mpath href="#c3"/></animateMotion></circle>
+          <circle r="5"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite"><mpath href="#c4"/></animateMotion></circle>
+          <circle r="5"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite"><mpath href="#c5"/></animateMotion></circle>
+        </g>
+        <g font-family="Segoe UI, system-ui, sans-serif" text-anchor="middle">
+          <g class="node" id="node-request">
+            <rect class="node-rect" x="40" y="185" width="150" height="80" rx="14" fill="#141b2e" stroke="#2a3550" stroke-width="1.5"/>
+            <text x="115" y="218" font-size="17" font-weight="700" fill="#e8ecf4">Request</text>
+            <text x="115" y="242" font-size="12.5" fill="#8b98ad">a business question</text>
+          </g>
+          <g class="node" id="node-router">
+            <rect class="node-rect" x="226" y="185" width="150" height="80" rx="14" fill="#141b2e" stroke="#7c5cff" stroke-width="2"/>
+            <text x="301" y="218" font-size="17" font-weight="700" fill="#e8ecf4">Router</text>
+            <text x="301" y="242" font-size="12.5" fill="#8b98ad">classifies intent</text>
+          </g>
+          <g class="node" id="node-agents">
+            <rect class="node-rect" x="412" y="185" width="190" height="80" rx="14" fill="#141b2e" stroke="#38bdf8" stroke-width="2"/>
+            <text x="507" y="212" font-size="17" font-weight="700" fill="#e8ecf4">Domain Agents</text>
+            <text x="507" y="236" font-size="12.5" fill="#8b98ad">Invoice · Report</text>
+            <text x="507" y="254" font-size="12.5" fill="#8b98ad">Lookup · Policy</text>
+          </g>
+          <g class="node" id="node-mcp">
+            <rect class="node-rect" x="638" y="185" width="150" height="80" rx="14" fill="#141b2e" stroke="#22d3ee" stroke-width="2"/>
+            <text x="713" y="218" font-size="17" font-weight="700" fill="#e8ecf4">MCP Tools</text>
+            <text x="713" y="240" font-size="12.5" fill="#8b98ad">lookup · validate</text>
+            <text x="713" y="257" font-size="12.5" fill="#8b98ad">search · draft</text>
+          </g>
+          <g class="node" id="node-hitl">
+            <rect class="node-rect" x="824" y="185" width="150" height="80" rx="14" fill="#1c1408" stroke="#f59e0b" stroke-width="2">
+              <animate attributeName="stroke-opacity" values="1;0.45;1" dur="2s" repeatCount="indefinite"/>
+            </rect>
+            <text x="899" y="218" font-size="17" font-weight="700" fill="#fbbf24">HITL Gate</text>
+            <text x="899" y="242" font-size="12.5" fill="#d9a441">human approves</text>
+            <text x="899" y="258" font-size="12.5" fill="#d9a441">money moves</text>
+          </g>
+          <g class="node" id="node-result">
+            <rect class="node-rect" x="1010" y="185" width="150" height="80" rx="14" fill="#0d2318" stroke="#34d399" stroke-width="2"/>
+            <text x="1085" y="218" font-size="17" font-weight="700" fill="#6ee7b7">Result</text>
+            <text x="1085" y="242" font-size="12.5" fill="#8b98ad">citations + trace</text>
+          </g>
+        </g>
+        <g stroke="#f59e0b" stroke-width="2" fill="none" stroke-dasharray="6 5">
+          <path id="h1" d="M 899 265 V 330" marker-end="url(#arrowAmber)"/>
+          <path id="h2" d="M 1004 355 C 1014 355 1030 340 1045 320 C 1058 303 1072 285 1085 268" marker-end="url(#arrowAmber)"/>
+        </g>
+        <g fill="#fbbf24">
+          <circle r="5"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#h1"/></animateMotion></circle>
+          <circle r="5"><animateMotion dur="3s" begin="1.5s" repeatCount="indefinite"><mpath href="#h2"/></animateMotion></circle>
+        </g>
+        <rect x="794" y="330" width="210" height="48" rx="24" fill="#141b2e" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="899" y="359" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="#fbbf24">👤 Human approves / rejects</text>
+        <g font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#8b98ad">
+          <text x="60" y="425">✓ Every tool call goes through the MCP server — agents never touch data directly.</text>
+          <text x="60" y="449">✓ If a step fails mid-way, the saga reverses the steps already done. Nothing is left half-applied.</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="steps" id="steps">
+      <button class="step active" data-node="node-request" data-title="1 · Request" data-body="You type a request in plain English — for example, “Approve payment for invoice INV-1003” or “What is the expense reimbursement limit?”. No forms, no special syntax. The request is just a sentence, and the engine treats it as a job to be done.">
+        <span class="num">1</span><span class="title">Request</span>
+        <p>A business question, in plain English.</p>
+      </button>
+      <button class="step" data-node="node-router" data-title="2 · Router" data-body="The Router reads the sentence and decides what kind of job it is: an invoice job, a report job, a data lookup, or a policy question. Think of a receptionist who knows exactly which department to send you to. By default it uses simple, deterministic rules — plug in Azure OpenAI and a real model does the classifying instead.">
+        <span class="num">2</span><span class="title">Router</span>
+        <p>Classifies the request and picks the right specialist.</p>
+      </button>
+      <button class="step" data-node="node-agents" data-title="3 · Domain agents" data-body="Four specialists, each good at one thing: InvoiceAgent validates invoices and proposes payments; ReportAgent drafts reports from real figures; DataLookupAgent finds records and answers with citations; PolicyAgent answers handbook questions using retrieval over seeded policy documents. A specialist never does another specialist's job.">
+        <span class="num">3</span><span class="title">Domain agents</span>
+        <p>Four specialists: Invoice, Report, Lookup, Policy.</p>
+      </button>
+      <button class="step" data-node="node-mcp" data-title="4 · MCP tools" data-body="Agents never touch data directly. Every lookup, validation, search and draft goes through a FastMCP tool server — one shared toolbox with named tools like lookup_invoice, validate_invoice and search_policy. Because all data access flows through one place, it can be logged, audited and swapped without touching the agents. The server is also exposed over HTTP at /mcp for external clients.">
+        <span class="num">4</span><span class="title">MCP tools</span>
+        <p>One shared toolbox every agent must use.</p>
+      </button>
+      <button class="step" data-node="node-hitl" data-title="5 · Human-in-the-loop gate" data-body="This is the load-bearing part. If a job involves money — approve a payment, issue a credit, send money — the workflow literally pauses inside the graph (LangGraph interrupt) and waits in the review queue. No code path can execute the payment without approval is True. A human clicks Approve &amp; execute or Reject in the dashboard. Rejecting leaves zero side effects behind.">
+        <span class="num">5</span><span class="title">HITL gate</span>
+        <p>Money moves pause for a human. Always.</p>
+      </button>
+      <button class="step" data-node="node-result" data-title="6 · Result" data-body="The answer comes back with citations (which invoice, which policy section), the full step trace, and the run's latency, token count and cost. If the job was a payment, the result also shows the saga log — every step that ran, and every compensation that ran if something failed.">
+        <span class="num">6</span><span class="title">Result</span>
+        <p>Answer, citations, trace, cost — all visible.</p>
+      </button>
+    </div>
+
+    <div class="step-detail" id="step-detail">
+      <b>1 · Request</b> — You type a request in plain English — for example, “Approve payment for invoice INV-1003” or “What is the expense reimbursement limit?”. No forms, no special syntax. The request is just a sentence, and the engine treats it as a job to be done.
+    </div>
+  </div>
+</section>
+
+<section id="agents">
+  <div class="wrap">
+    <h2>The four agents</h2>
+    <p class="sub">Each agent owns one kind of work, and each one only calls tools through MCP.</p>
+    <div class="agents">
+      <div class="card agent">
+        <h3>🧾 InvoiceAgent</h3>
+        <p>Invoice intake and validation. Checks the purchase order, flags duplicates, spots overdue invoices, and proposes payments — never executes them.</p>
+        <p><code>validate_invoice</code> · <code>lookup_invoice</code></p>
+      </div>
+      <div class="card agent">
+        <h3>📊 ReportAgent</h3>
+        <p>Report generation from real figures: totals, pending counts, overdue amounts, per-vendor breakdowns — drafted from the ledger, not invented.</p>
+        <p><code>draft_report</code> · <code>get_ledger</code></p>
+      </div>
+      <div class="card agent">
+        <h3>🔎 DataLookupAgent</h3>
+        <p>Structured data lookup. Finds invoices, vendors and balances, and answers with citations so you can check every fact it states.</p>
+        <p><code>lookup_invoice</code> · <code>list_vendors</code></p>
+      </div>
+      <div class="card agent">
+        <h3>📖 PolicyAgent</h3>
+        <p>Policy and handbook Q&amp;A with retrieval over seeded documents (expense, leave, procurement, travel). Returns the matching section, not a guess.</p>
+        <p><code>search_policy</code></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="safety" class="alt">
+  <div class="wrap">
+    <h2>Why it's safe to let it run</h2>
+    <p class="sub">Three mechanisms do the heavy lifting. They are enforced in code, not just documented.</p>
+    <div class="safety">
+      <div class="card">
+        <div class="icon">✋</div>
+        <h3>Human-in-the-loop, by construction</h3>
+        <p>A financial action cannot execute without <code>approval is True</code>. The graph pauses at an <code>interrupt()</code>; the only way forward is a human decision in the review queue. Tests prove a payment never runs without approval, and a rejection leaves no side effects.</p>
+      </div>
+      <div class="card">
+        <div class="icon">↩️</div>
+        <h3>Sagas that undo themselves</h3>
+        <p>A payment is three steps: reserve funds, post the ledger entry, notify the vendor. If step three fails, the saga runs compensations in reverse — reverses the ledger entry, releases the reservation. Nothing is left half-applied, and every step is idempotent, so resuming never double-pays.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💾</div>
+        <h3>Checkpoints: save points for workflows</h3>
+        <p>Like a save point in a video game. State is checkpointed after every step (Postgres when <code>DATABASE_URL</code> is set, SQLite otherwise). Kill the process mid-payment and restart it — the run resumes from the checkpoint and the payment is applied exactly once.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="evals">
+  <div class="wrap">
+    <h2>Measured results — not marketing numbers</h2>
+    <p class="sub">An eval harness runs a 20-case golden set of labelled workflows through the live graph and scores it. These are the numbers from the run on 8 Nov 2026, mock provider. Re-run any time with <code>python -m app.eval</code>.</p>
+    <div class="card">
+      <table>
+        <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Golden cases</td><td>20</td></tr>
+          <tr><td>Routing accuracy</td><td>100.0%</td></tr>
+          <tr><td>Agent accuracy</td><td>100.0%</td></tr>
+          <tr><td>Outcome accuracy</td><td>100.0%</td></tr>
+          <tr><td>Autonomous resolution rate</td><td>85.0% (17/20)</td></tr>
+          <tr><td>Cases needing human approval</td><td>3</td></tr>
+          <tr><td>Avg latency per case</td><td>24.5 ms</td></tr>
+          <tr><td>Total tokens (mock provider)</td><td>7,035</td></tr>
+        </tbody>
+      </table>
+      <p class="eval-note">The 3 cases that need approval are the 3 payment/credit requests in the golden set — by design, those can never resolve autonomously. Per-case detail: <code>data/eval_results.json</code>.</p>
+      <p class="eval-note"><b>A note on the 88%.</b> In production at BDO India, the same architecture resolved 88% of 100+ workflows autonomously. That is a production result from a different system and dataset. This repo's own measured number is 85.0% on its 20-case golden set. They are not the same number, and this page does not mix them up.</p>
+    </div>
+  </div>
+</section>
+
+<section id="try" class="alt">
+  <div class="wrap">
+    <h2>Try it</h2>
+    <p class="sub">One command. No keys needed — the mock LLM provider is the default, so everything runs offline and deterministically.</p>
+<pre><span class="c"># 1. Set up</span>
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+
+<span class="c"># 2. Run</span>
+uvicorn app.main:app --port 8000
+
+<span class="c"># 3. Open http://127.0.0.1:8000 and try:</span>
+<span class="c">#    "Validate invoice INV-1001"</span>
+<span class="c">#    "Approve payment for invoice INV-1003"  (pauses for approval)</span>
+<span class="c">#    "What is the expense reimbursement limit?"</span></pre>
+    <p>With Docker (api + Postgres): <code>docker compose up --build</code></p>
+    <p>Run the tests and the eval:</p>
+<pre>pytest -q
+python -m app.eval</pre>
+    <p>API: <code>POST /api/runs</code> · <code>GET /api/approvals</code> · <code>POST /api/approvals/{id}/approve</code> · <code>GET /api/metrics</code> · <code>GET /api/eval</code> · MCP server at <code>/mcp</code>. Full list in the <a href="https://github.com/ProNoob-Dev/ai-multi-agent-workflow-engine">README</a>.</p>
+  </div>
+</section>
+
+<section id="shots">
+  <div class="wrap">
+    <h2>Screenshots</h2>
+    <p class="sub">Real screenshots of the running dashboard — not mockups.</p>
+    <div class="shots">
+      <figure><img src="screenshots/01-overview.png" alt="Dashboard overview with metrics cards and run form"><figcaption><b>Overview</b> — live metrics, run form, how-it-works flow.</figcaption></figure>
+      <figure><img src="screenshots/02-run-detail.png" alt="Run timeline with a run detail showing steps and trace"><figcaption><b>Run timeline</b> — every run traced, click a row for the full detail.</figcaption></figure>
+      <figure><img src="screenshots/03-review-queue.png" alt="Human review queue with a payment awaiting approval"><figcaption><b>Review queue</b> — financial actions wait here for a human.</figcaption></figure>
+      <figure><img src="screenshots/04-approval-paused.png" alt="A payment run paused at the human gate, showing the financial action and trace"><figcaption><b>Approval paused</b> — a payment waiting for a human, with its full trace.</figcaption></figure>
+      <figure><img src="screenshots/05-evals.png" alt="Eval panel showing measured results"><figcaption><b>Evals</b> — the measured golden-set results in the dashboard.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="alt">
+  <div class="wrap">
+    <h2>FAQ</h2>
+    <div class="faq">
+      <details>
+        <summary>What is an “agent” here?</summary>
+        <p>A specialist worker that does one kind of job. The InvoiceAgent only handles invoices; the PolicyAgent only answers policy questions. Splitting the work makes each one easier to test, easier to trust, and easier to replace.</p>
+      </details>
+      <details>
+        <summary>What is MCP?</summary>
+        <p>The Model Context Protocol — a standard way for an AI system to call tools. Here it is a FastMCP server that exposes named tools (lookup, validate, search, draft). Agents call the tools; they never touch the data directly, so every data access is logged in one place.</p>
+      </details>
+      <details>
+        <summary>What is a saga?</summary>
+        <p>A multi-step job where every step knows how to undo itself. If step three fails, steps two and one are undone in reverse order. Think of it as a checklist that erases itself cleanly when something goes wrong.</p>
+      </details>
+      <details>
+        <summary>Can it pay an invoice by itself?</summary>
+        <p>No — and that is the point. A payment pauses at the human-in-the-loop gate and waits in the review queue. The graph cannot proceed without a human clicking Approve. The tests prove it: a payment without approval never executes, and a rejection leaves zero side effects.</p>
+      </details>
+      <details>
+        <summary>Does it need an OpenAI key?</summary>
+        <p>No. The mock provider is the default: deterministic, offline, and what the tests and eval use. Set <code>AZURE_OPENAI_ENDPOINT</code>, <code>AZURE_OPENAI_API_KEY</code> and <code>AZURE_OPENAI_DEPLOYMENT</code> to switch to a real Azure OpenAI model — and re-run the eval before quoting any accuracy number with it.</p>
+      </details>
+      <details>
+        <summary>Is the data real?</summary>
+        <p>No. Vendors, invoices and policies are realistic but invented seed data, for demo and evaluation. The golden set uses dates relative to today so it never goes stale.</p>
+      </details>
+      <details>
+        <summary>What is untested?</summary>
+        <p>The Docker path and the Postgres checkpointer were not run end to end on the build machine (no Docker or Postgres there), and the Qdrant backend needs a live Qdrant server to verify. The default JSON + SQLite path is fully tested — 34 tests, all passing. The README lists every limitation honestly.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>AI Multi-Agent Workflow Engine · Built with LangGraph, FastMCP and FastAPI · MIT License</p>
+    <p>© 2026 <a href="https://github.com/ProNoob-Dev">Jaikishan Bagul</a> · <a href="https://github.com/ProNoob-Dev/ai-multi-agent-workflow-engine">GitHub repo</a></p>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

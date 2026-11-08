@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Multi-Agent Workflow Engine — Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">◈</div>
+    <div>
+      <h1>AI Multi-Agent Workflow Engine</h1>
+      <p>Router → Domain Agents → MCP Tools → Human-in-the-Loop → Result</p>
+    </div>
+  </div>
+  <div class="status-pill" id="status-pill">● checking…</div>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" data-tab="overview">Overview</button>
+  <button class="tab" data-tab="runs">Runs <span class="count" id="runs-count">0</span></button>
+  <button class="tab" data-tab="approvals">Review Queue <span class="count warn" id="approvals-count">0</span></button>
+  <button class="tab" data-tab="evals">Evals</button>
+</nav>
+
+<main>
+  <!-- OVERVIEW -->
+  <section id="tab-overview" class="tabpane active">
+    <div class="metrics">
+      <div class="card metric"><span class="label">Total runs</span><span class="value" id="m-total">–</span></div>
+      <div class="card metric"><span class="label">Autonomous rate</span><span class="value" id="m-auto">–</span></div>
+      <div class="card metric"><span class="label">Avg latency</span><span class="value" id="m-lat">–</span></div>
+      <div class="card metric"><span class="label">Pending approvals</span><span class="value warn" id="m-pend">–</span></div>
+      <div class="card metric"><span class="label">Total tokens</span><span class="value" id="m-tok">–</span></div>
+      <div class="card metric"><span class="label">Est. cost (mock)</span><span class="value" id="m-cost">–</span></div>
+    </div>
+
+    <div class="card run-form">
+      <h2>Run a workflow</h2>
+      <p class="hint">Type a business request. The Router sends it to the right domain agent; anything involving money pauses for your approval.</p>
+      <textarea id="req-input" rows="3" placeholder="e.g. Approve payment for invoice INV-1003"></textarea>
+      <div class="chips">
+        <button class="chip" data-req="Validate invoice INV-1001">Validate INV-1001</button>
+        <button class="chip" data-req="Approve payment for invoice INV-1003">Pay INV-1003</button>
+        <button class="chip" data-req="What is the status of invoice INV-1001?">Invoice status</button>
+        <button class="chip" data-req="Generate the monthly spend report for this month">Monthly report</button>
+        <button class="chip" data-req="What is the expense reimbursement limit?">Expense policy</button>
+        <button class="chip" data-req="How much do we owe Northwind Traders?">What we owe</button>
+      </div>
+      <button class="btn-primary" id="run-btn">▶ Run workflow</button>
+      <div id="run-result" class="result hidden"></div>
+    </div>
+
+    <div class="card">
+      <h2>How it works</h2>
+      <div class="flow">
+        <div class="node">Router<span>classifies the request</span></div><div class="arrow">→</div>
+        <div class="node">Domain Agent<span>Invoice · Report · Lookup · Policy</span></div><div class="arrow">→</div>
+        <div class="node">MCP Tools<span>lookup · validate · search · draft</span></div><div class="arrow">→</div>
+        <div class="node gate">HITL Gate<span>human approves money moves</span></div><div class="arrow">→</div>
+        <div class="node done">Result<span>with citations + trace</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUNS -->
+  <section id="tab-runs" class="tabpane">
+    <div class="card">
+      <h2>Run timeline</h2>
+      <p class="hint">Every run is traced: router decision, agent, MCP tool calls, latency and tokens. Click a row for the full trace.</p>
+      <table class="runs-table">
+        <thead><tr><th>Time</th><th>Request</th><th>Intent</th><th>Agent</th><th>Status</th><th>Latency</th><th>Tokens</th></tr></thead>
+        <tbody id="runs-body"><tr><td colspan="7">Loading…</td></tr></tbody>
+      </table>
+      <div id="run-detail" class="detail hidden"></div>
+    </div>
+  </section>
+
+  <!-- APPROVALS -->
+  <section id="tab-approvals" class="tabpane">
+    <div class="card">
+      <h2>Human review queue</h2>
+      <p class="hint">Financial actions pause here until a human approves or rejects them. Nothing involving money executes without this step.</p>
+      <div id="approvals-list"><p>Loading…</p></div>
+    </div>
+  </section>
+
+  <!-- EVALS -->
+  <section id="tab-evals" class="tabpane">
+    <div class="card">
+      <h2>Golden-set evaluation</h2>
+      <p class="hint">20 labelled workflows run through the live graph. Numbers below are measured by <code>python -m app.eval</code> — not hardcoded.</p>
+      <div id="eval-body"><p>Loading…</p></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>AI Multi-Agent Workflow Engine · LangGraph · FastMCP · FastAPI · Mock LLM by default (Azure OpenAI via env vars) · <a href="/docs">Docs</a></p>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
