@@ -1,0 +1,1 @@
+[{"check":"section-height","reason":"the footer is not a section: it holds two lines of credits and links, and making it a full screen would be empty space a visitor must scroll past","target":"footer"}]

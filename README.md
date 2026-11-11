@@ -34,6 +34,34 @@ Ask it a business question in plain English:
 
 State is checkpointed with LangGraph: **PostgresSaver** when `DATABASE_URL` is set, **SQLite** otherwise, in-memory as a last resort. Kill a run mid-payment and restart it — it resumes from the checkpoint, and the payment is applied exactly once (proven by `tests/test_checkpoint.py`).
 
+## Architecture — watch it run
+
+The best way to understand the system is to watch a request move through it. The docs site has a live, playable simulation: a request enters as a dot, the router lights up, the agent calls its tools, a payment stops at the human gate until you approve it, and a failing step runs the saga's undos in reverse.
+
+**Try it:** <https://pronoob-dev.github.io/ai-multi-agent-workflow-engine/#sim> — pick a request and press Play. The three scenarios are: validate an invoice (read-only, no gate), approve a payment (the gate holds, you approve, the saga runs), and approve a payment where the notify step fails (the saga reverses the ledger entry and releases the reservation, so nothing is left half-applied).
+
+![Live simulation: a payment held at the human gate](docs/screenshots/07-sim-gate-hold.png)
+
+Short screen recording of the approve-a-payment run (the gate holds, a human approves, the saga runs): [docs/demo/architecture-sim.webm](docs/demo/architecture-sim.webm)
+
+### The five layers
+
+| Layer | Tech | What it does | Why it is there |
+|---|---|---|---|
+| Requests in | FastAPI | HTTP API and dashboard. A request arrives as JSON; the answer leaves as JSON with citations and a trace. | One front door. The engine behind it can change without changing the API. |
+| Route and run | LangGraph | The router classifies the request; the graph runs the agents as nodes; state is checkpointed after every step. | The workflow is a graph, so its state is visible, pausable and resumable. |
+| Specialists | Domain agents | InvoiceAgent, ReportAgent, DataLookupAgent, PolicyAgent. Each owns one kind of work and calls tools through MCP. | One job per agent makes each one easy to test, easy to trust and easy to replace. |
+| Tools and memory | FastMCP, PostgreSQL, SQLite, Qdrant | Every data access flows through the MCP tool server. Checkpoints live in Postgres, or SQLite when no database is set. | Agents never touch data directly, so every access is logged in one place, and a killed run resumes exactly once. |
+| Proof | OpenTelemetry, Langfuse, eval harness | Every run leaves a trace with latency, tokens and cost. The eval harness scores a 20-case golden set and reports the measured rate. | The numbers in this README are measured by the repo, not claimed in copy. |
+
+### The three safety guarantees, in one paragraph each
+
+**Human-in-the-loop.** A financial action cannot execute without approval. The graph pauses at a LangGraph `interrupt()` and the run waits in the review queue. The only way forward is a human decision. Rejecting leaves zero side effects. Tests prove a payment never runs without approval (`tests/test_hitl.py`).
+
+**Compensating saga.** A payment is three steps: reserve funds, post the ledger entry, notify the vendor. If any step fails, the saga runs compensations in reverse order, and every step is idempotent, so resuming a run never double-applies a payment (`tests/test_saga.py`).
+
+**Checkpoints.** State is checkpointed after every step. Kill the process mid-payment and restart it: the run resumes from the checkpoint and the payment is applied exactly once (`tests/test_checkpoint.py`).
+
 ## Dashboard
 
 ![Dashboard overview](docs/screenshots/01-overview.png)

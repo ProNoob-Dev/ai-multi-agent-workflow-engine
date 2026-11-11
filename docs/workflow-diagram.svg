@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" width="1200" height="470" role="img" aria-label="Workflow diagram: a request flows from the Router to domain agents, through MCP tools, pauses at the human-in-the-loop gate, and reaches a result">
   <defs>
     <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="0" stop-color="#38bdf8"/>
       <stop offset="0.55" stop-color="#38bdf8"/>
       <stop offset="1" stop-color="#22d3ee"/>
     </linearGradient>
@@ -44,7 +44,7 @@
     <text x="115" y="242" font-size="12.5" fill="#8b98ad">a business question</text>
 
     <!-- Router -->
-    <rect x="226" y="185" width="150" height="80" rx="14" fill="#141b2e" stroke="#7c5cff" stroke-width="2"/>
+    <rect x="226" y="185" width="150" height="80" rx="14" fill="#141b2e" stroke="#38bdf8" stroke-width="2"/>
     <text x="301" y="218" font-size="17" font-weight="700" fill="#e8ecf4">Router</text>
     <text x="301" y="242" font-size="12.5" fill="#8b98ad">classifies intent</text>
 

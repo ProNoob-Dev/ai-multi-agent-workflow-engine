@@ -1,0 +1,2182 @@
+{
+ "start": "2026-11-11T19:17:08.999Z",
+ "round": 3,
+ "idle": 0,
+ "errors": 0,
+ "status": "open",
+ "history": [
+  {
+   "at": "2026-11-11T19:32:07.831Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 60,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-11T19:38:32.325Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 53,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-11T19:44:12.489Z",
+   "mode": "manual",
+   "status": "open",
+   "fails": 52,
+   "round": 3,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "docs/index.html",
+  "url": null,
+  "root": null,
+  "kind": "software",
+  "category": "multi-agent workflow engine",
+  "primary": "Run it in one command",
+  "rounds": 3,
+  "start": "2026-11-11T19:17:08.999Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "roundKey": "29f77d64bb873590:b01cd7a6",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "29f77d64bb873590",
+ "page": "docs/index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "spill",
+    "where": "div.safety > div.card:nth-of-type(1) > p > code:nth-of-type(2) \"interrupt()\"",
+    "msg": "runs 25px past the bottom edge of the panel it sits on (div.safety > div.card:nth-of-type(1) > p > code:nth-of-type(1))",
+    "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "spill"
+    ],
+    "wheres": [
+     "div.safety > div.card:nth-of-type(1) > p > code:nth-of-type(2) \"interrupt()\""
+    ]
+   },
+   {
+    "check": "row-gap",
+    "where": "div#steps > button.step:nth-of-type(5) \"5HITL gate Money moves pause for a human\"",
+    "msg": "fills 50% of its grid row and leaves 51% of it empty on the right",
+    "fix": "fill the row at this width: span the columns, or stack the split",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "row-gap"
+    ],
+    "wheres": [
+     "div#steps > button.step:nth-of-type(5) \"5HITL gate Money moves pause for a human\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#what \"What this is\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#what \"What this is\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#sim \"Watch a workflow run\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#sim \"Watch a workflow run\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#agents \"The four agents\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#agents \"The four agents\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#safety \"Why it's safe to let it run\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#safety \"Why it's safe to let it run\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#evals \"Measured results — not marketing numbers\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#evals \"Measured results — not marketing numbers\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#try \"Run the engine\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#try \"Run the engine\""
+    ]
+   },
+   {
+    "check": "text-only",
+    "where": "section#faq \"FAQ\"",
+    "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+    "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-only"
+    ],
+    "wheres": [
+     "section#faq \"FAQ\""
+    ]
+   },
+   {
+    "check": "card-visual",
+    "where": "section#what > div.wrap > div.plain \"🏢 The problem Business teams get the sa\"",
+    "msg": "3 cards hold only text: no picture, icon, UI fragment or effect in any of them",
+    "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "card-visual"
+    ],
+    "wheres": [
+     "section#what > div.wrap > div.plain \"🏢 The problem Business teams get the sa\""
+    ]
+   },
+   {
+    "check": "card-visual",
+    "where": "div#sim-flow \"INPUT Request “Validate invoice INV-1001\"",
+    "msg": "7 cards hold only text: no picture, icon, UI fragment or effect in any of them",
+    "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "card-visual"
+    ],
+    "wheres": [
+     "div#sim-flow \"INPUT Request “Validate invoice INV-1001\""
+    ]
+   },
+   {
+    "check": "card-visual",
+    "where": "section#layers > div.wrap > div.layers \"1 · Requests in FastAPI HTTP API and the\"",
+    "msg": "5 cards hold only text: no picture, icon, UI fragment or effect in any of them",
+    "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "card-visual"
+    ],
+    "wheres": [
+     "section#layers > div.wrap > div.layers \"1 · Requests in FastAPI HTTP API and the\""
+    ]
+   },
+   {
+    "check": "card-visual",
+    "where": "section#agents > div.wrap > div.agents \"🧾 InvoiceAgent Invoice intake and valid\"",
+    "msg": "4 cards hold only text: no picture, icon, UI fragment or effect in any of them",
+    "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "card-visual"
+    ],
+    "wheres": [
+     "section#agents > div.wrap > div.agents \"🧾 InvoiceAgent Invoice intake and valid\""
+    ]
+   },
+   {
+    "check": "card-visual",
+    "where": "section#safety > div.wrap > div.safety \"✋ Human-in-the-loop, by construction A f\"",
+    "msg": "3 cards hold only text: no picture, icon, UI fragment or effect in any of them",
+    "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "card-visual"
+    ],
+    "wheres": [
+     "section#safety > div.wrap > div.safety \"✋ Human-in-the-loop, by construction A f\""
+    ]
+   },
+   {
+    "check": "card-layout",
+    "where": "section#shots > div.wrap > div.shots",
+    "msg": "5 of 5 cards drawn one way (one panel, ground, placement and fragment): copies of one card",
+    "fix": "a card layout at most twice on a page: build the other sections another way",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "card-layout"
+    ],
+    "wheres": [
+     "section#shots > div.wrap > div.shots"
+    ]
+   },
+   {
+    "check": "button-styles",
+    "where": "(one screen)",
+    "msg": "4 button styles on one screen: soft, fill #141b2e, outline #2a3550 (\"Run one step\"); soft, fill #1d6fb8 (\"▶ Play the run\"); soft, fill #34d399 (\"Approve and execute\"); soft, outline #f87171 (\"Reject the payment\"); the odd ones out: \"Approve and execute\", \"Reject the payment\"",
+    "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "button-styles"
+    ],
+    "wheres": [
+     "(one screen)"
+    ]
+   },
+   {
+    "check": "button-styles",
+    "where": "(the page)",
+    "msg": "5 button styles on the page: soft, fill #1d6fb8 x2 (\"Run it in one command →\"); soft, fill #141b2e, outline #2a3550 x4 (\"View on GitHub\"); soft, fill #12203a, outline #22d3ee x1 (\"Validate invoice INV-1001\"); soft, fill #34d399 x1 (\"Approve and execute\"); soft, outline #f87171 x1 (\"Reject the payment\")",
+    "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "button-styles"
+    ],
+    "wheres": [
+     "(the page)"
+    ]
+   },
+   {
+    "check": "button-styles",
+    "where": "section.hero > div.wrap > div.cta > a.btn.primary \"Run it in one command →\"",
+    "msg": "one button style (soft, fill #1d6fb8) in 2 heights: 43, 50px (\"Run it in one command →\" 50px, \"▶ Play the run\" 43px)",
+    "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "button-styles"
+    ],
+    "wheres": [
+     "section.hero > div.wrap > div.cta > a.btn.primary \"Run it in one command →\""
+    ]
+   },
+   {
+    "check": "button-styles",
+    "where": "section.hero > div.wrap > div.cta > a.btn:nth-of-type(2) \"View on GitHub\"",
+    "msg": "one button style (soft, fill #141b2e, outline #2a3550) in 3 heights: 43, 47, 50px (\"View on GitHub\" 50px, \"Run one step\" 43px)",
+    "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "button-styles"
+    ],
+    "wheres": [
+     "section.hero > div.wrap > div.cta > a.btn:nth-of-type(2) \"View on GitHub\""
+    ]
+   },
+   {
+    "check": "cta",
+    "where": "section#faq \"FAQ\"",
+    "msg": "the last section before the footer ends with no button",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "cta"
+    ],
+    "wheres": [
+     "section#faq \"FAQ\""
+    ]
+   },
+   {
+    "check": "copy-headings",
+    "where": "section#what > div.wrap > h2 \"What this is\"",
+    "msg": "\"What this is\" names no product, part, place or section (5 headings like it; at most one brand line per page) (and 4 more like it: \"Architecture, layer by l\", \"Why it's safe to let it \", \"Money waits for a human.\", \"Screenshots\")",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headings"
+    ],
+    "wheres": [
+     "section#what > div.wrap > h2 \"What this is\""
+    ]
+   },
+   {
+    "check": "contrast",
+    "where": "header.nav > div.wrap > div.logo \"◈\"",
+    "msg": "body text over a effect reads at 1.9:1 at its worst tenth (needs 4.5:1) (and 6 more like it: \"1\", \"2\", \"3\", \"4\", ...)",
+    "fix": "put the text on a calm part of the picture, or on a solid panel",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "contrast"
+    ],
+    "wheres": [
+     "header.nav > div.wrap > div.logo \"◈\""
+    ]
+   },
+   {
+    "check": "text-contrast",
+    "where": "div#sim-node-agents > div > div.sim-chips > span.sim-chip:nth-of-type(1) \"InvoiceAgent\"",
+    "msg": "a caption, label or muted line in #4c5668 on #0d1322 reads 2.5:1 (needs 4.5:1); 9 like it, like \"ReportAgent\", \"DataLookupAgent\", \"PolicyAgent\"",
+    "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-contrast"
+    ],
+    "wheres": [
+     "div#sim-node-agents > div > div.sim-chips > span.sim-chip:nth-of-type(1) \"InvoiceAgent\""
+    ]
+   },
+   {
+    "check": "text-contrast",
+    "where": "section#try > div.wrap > pre:nth-of-type(1) > span.c:nth-of-type(1) \"# 1. Set up\"",
+    "msg": "body text in #5b6b8c on #0d1220 reads 3.49:1 (needs 7:1); 5 like it, like \"# 3. Open http://127.0\", \"# \"Validate invoice IN\", \"# \"Approve payment for\"",
+    "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-contrast"
+    ],
+    "wheres": [
+     "section#try > div.wrap > pre:nth-of-type(1) > span.c:nth-of-type(1) \"# 1. Set up\""
+    ]
+   },
+   {
+    "check": "text-contrast",
+    "where": "section#try > div.wrap > pre:nth-of-type(1) > span.c:nth-of-type(2) \"# 2. Run\"",
+    "msg": "a caption, label or muted line in #5b6b8c on #0d1220 reads 3.49:1 (needs 4.5:1)",
+    "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-contrast"
+    ],
+    "wheres": [
+     "section#try > div.wrap > pre:nth-of-type(1) > span.c:nth-of-type(2) \"# 2. Run\""
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section.hero / section#what",
+    "msg": "233px between these sections, +77% against the median 132px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section.hero / section#what"
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#sim / section#layers",
+    "msg": "459px between these sections, +248% against the median 132px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#sim / section#layers"
+    ]
+   },
+   {
+    "check": "section-tile",
+    "where": "section#try \"Run the engine\"",
+    "msg": "the section is 796px tall (0.88 screens at 1440x900), shorter than the screen: its tile (the screen from its top) shows 736px of it and 103px of the next section, its heading \"Screenshots\" on screen",
+    "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-tile"
+    ],
+    "wheres": [
+     "section#try \"Run the engine\""
+    ]
+   },
+   {
+    "check": "section-tile",
+    "where": "section#faq \"FAQ\"",
+    "msg": "the section is 673px tall (0.75 screens at 1440x900), shorter than the screen: its tile, held at the page's end (scroll 9537px) shows 673px of it and 141px of the next section (\"AI Multi-Agent Workflow Engine\"), its text \"AI Multi-Agent Workflow Engine\" on screen",
+    "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-tile"
+    ],
+    "wheres": [
+     "section#faq \"FAQ\""
+    ]
+   },
+   {
+    "check": "hero-screen",
+    "where": "section.hero \"LangGraph · FastAPI · MCP AI Multi-Agent\"",
+    "msg": "the hero ends at 961px on a 900px screen, 61px below the fold: it ends at the fold, 1px either way (SR-1)",
+    "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "hero-screen"
+    ],
+    "wheres": [
+     "section.hero \"LangGraph · FastAPI · MCP AI Multi-Agent\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "footer.closing \"AI Multi-Agent Workflow Engine · Built w\"",
+    "msg": "the section is 141px tall (0.2 screens), 759px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "footer.closing \"AI Multi-Agent Workflow Engine · Built w\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#agents \"The four agents Each agent owns one kind\"",
+    "msg": "the section is 497px tall (0.6 screens), 403px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "section#agents \"The four agents Each agent owns one kind\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#what \"What this is No jargon needed. Here is t\"",
+    "msg": "the section is 521px tall (0.6 screens), 379px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 7 more like it: \"Why it's safe to let it \", \"FAQ What is an “agent” h\", \"How it works, step by st\") (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "section#what \"What this is No jargon needed. Here is t\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#how \"How it works, step by step The animation\"",
+    "msg": "the section starts at 1482px, 318px above the screen grid (2 x 900px): sections start on whole screens (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "section#how \"How it works, step by step The animation\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#safety \"Why it's safe to let it run Three mechan\"",
+    "msg": "the section starts at 5715px, 315px below the screen grid (6 x 900px): sections start on whole screens (and 10 more like it: \"FAQ What is an “agent” h\", \"The four agents Each age\", \"Watch a workflow run Pic\") (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "section#safety \"Why it's safe to let it run Three mechan\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#shots \"Screenshots Real screenshots of the runn\"",
+    "msg": "the section's content does not fit it: its lowest content ends 682px below its top, past 675px (the section less 72px of bottom padding) (and 1 more like it: \"Run the engine One comma\") (SR-2)",
+    "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "section#shots \"Screenshots Real screenshots of the runn\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section#safety > div.wrap > h2 \"Why it's safe to let it run\"",
+    "msg": "the screen at scroll 5218px (the top of section 6) shows 403px of section 7 and the heading of section 7 whole and the content of 2 sections, over 24px each beside section 6: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "section#safety > div.wrap > h2 \"Why it's safe to let it run\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section#how > div.wrap > h2 \"How it works, step by step\"",
+    "msg": "the screen at scroll 961px (the top of section 2) shows 379px of section 3 and the heading of section 3 whole and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "section#how > div.wrap > h2 \"How it works, step by step\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "div#step-detail \"1 · Request — You type a request in plai\"",
+    "msg": "a band: a box 83% of the section wide on a ground of its own that holds only text: the section's own ground is the band (SR-4)",
+    "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "div#step-detail \"1 · Request — You type a request in plai\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "div#sim-panel \"InputRequest “Validate invoice INV-1001”\"",
+    "msg": "a band: a box 83% of the section wide on a ground of its own that holds only text: the section's own ground is the band (SR-4)",
+    "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "div#sim-panel \"InputRequest “Validate invoice INV-1001”\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section#layers > div.wrap > div.layers > div.layer:nth-of-type(1) \"1 · Requests inFastAPI HTTP API and the \"",
+    "msg": "a band: a box 83% of the section wide on a ground of its own that holds only text: the section's own ground is the band (and 12 more like it: \"2 · Route and runLangGra\", \"3 · SpecialistsDomain ag\", \"4 · Tools and memoryFast\") (SR-4)",
+    "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "section#layers > div.wrap > div.layers > div.layer:nth-of-type(1) \"1 · Requests inFastAPI HTTP API and the \""
+    ]
+   },
+   {
+    "check": "one-heading",
+    "where": "section#how > div.wrap > h2 \"How it works, step by step\"",
+    "msg": "headings of two sections show whole on one screen at 17 of 191 scroll positions (8.9%; at scroll 700, 750, 800, 850px), here with \"What this is\": at most 3% on a desktop (SR-5)",
+    "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-heading"
+    ],
+    "wheres": [
+     "section#how > div.wrap > h2 \"How it works, step by step\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "section.statement.mo-la \"Money waits for a human. A payment canno\"",
+    "msg": "the content of section 8 runs 400px from the left and 400px from the right: the page's container starts at 120px; the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)",
+    "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "section.statement.mo-la \"Money waits for a human. A payment canno\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "header.nav \"◈ AI Multi-Agent Workflow Engine How it \"",
+    "msg": "the nav's first box starts at 130px and its last ends at 1320px, not on its .wrap at 120-1320px (SR-6)",
+    "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "header.nav \"◈ AI Multi-Agent Workflow Engine How it \""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "section.hero \"LangGraph · FastAPI · MCP AI Multi-Agent\"",
+    "msg": "a <section> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "section.hero \"LangGraph · FastAPI · MCP AI Multi-Agent\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "section#what \"What this is No jargon needed. Here is t\"",
+    "msg": "a <section> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "section#what \"What this is No jargon needed. Here is t\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "section#how \"How it works, step by step The animation\"",
+    "msg": "a <section> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (and 10 more like it: \"Watch a workflow run Pic\", \"Architecture, layer by l\", \"The four agents Each age\") (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "section#how \"How it works, step by step The animation\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div#sim-node-agents > div > div.sim-chips > span.sim-chip:nth-of-type(1) \"InvoiceAgent\"",
+    "msg": "3 text blocks start on a left line at x 188, 68px from the container's left: text starts on the container's left, or on one split line (x 630, 732, 834) (also \"lookup_invoice\", \"1 · Reserve funds\") (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div#sim-node-agents > div > div.sim-chips > span.sim-chip:nth-of-type(1) \"InvoiceAgent\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div#sim-node-request > div > h3 \"Request\"",
+    "msg": "14 text blocks start on a left line at x 176, 56px from the container's left: text starts on the container's left, or on one split line (x 630, 732, 834) (also \"“Validate invoice INV-1001”\", \"Router\", \"Reads the request and picks an i\") (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div#sim-node-request > div > h3 \"Request\""
+    ]
+   },
+   {
+    "check": "row-lines",
+    "where": "section#shots > div.wrap > div.shots",
+    "msg": "a row of 2 items: its last item ends at 915px, the container's right line at 1320px (2px either way) (SR-7)",
+    "fix": "start the row's first item on the container's left line and end its last on the right line, every item one height",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "row-lines"
+    ],
+    "wheres": [
+     "section#shots > div.wrap > div.shots"
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "div#sim-panel > div.sim-grid \"InputRequest “Validate invoice INV-1001”\"",
+    "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 831, on none of the split lines 630 (k=5), 732 (k=6), 834 (k=7) (SR-8)",
+    "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "div#sim-panel > div.sim-grid \"InputRequest “Validate invoice INV-1001”\""
+    ]
+   },
+   {
+    "check": "spill",
+    "where": "section#try > div.wrap > p:nth-of-type(4) > code:nth-of-type(4) \"GET /api/metrics\"",
+    "msg": "runs 26px past the bottom edge of the panel it sits on (section#try > div.wrap > p:nth-of-type(4) > code:nth-of-type(3))",
+    "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "spill"
+    ],
+    "wheres": [
+     "section#try > div.wrap > p:nth-of-type(4) > code:nth-of-type(4) \"GET /api/metrics\""
+    ]
+   },
+   {
+    "check": "tap-size",
+    "where": "div.wrap > div.faq > details:nth-of-type(1) > summary \"What is an “agent” here?\"",
+    "msg": "a 246x26px tap target: 0px from the next one (\"Live run\"), so a thumb lands on the wrong one",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "tap-size"
+    ],
+    "wheres": [
+     "div.wrap > div.faq > details:nth-of-type(1) > summary \"What is an “agent” here?\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "copy-headings",
+    "where": "div.wrap > div.plain > div.card:nth-of-type(1) > h3 \"The problem\"",
+    "msg": "the card title \"The problem\" names no product, part, place or section (11 card titles like it) (and 10 more like it: \"The idea\", \"The safety net\", \"MCP tools\", \"Human gate\", ...)",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-buttons",
+    "where": "section.hero > div.wrap > div.cta > a.btn.primary \"Run it in one command →\"",
+    "msg": "\"Run it in one command →\" does not start with a verb (book, buy, try, start, get, see...) (and 7 more like it: \"Validate invoice INV-100\", \"Approve payment for INV-\", \"Approve and execute\", \"Reject the payment\", ...)",
+    "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-actions",
+    "where": "(the page)",
+    "msg": "the main action \"Run it in one command\" does not read word for word the same in the closing section",
+    "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "off-grid",
+    "where": "section.statement.mo-la > div.wrap > h2.mo-la__type \"Money waits for a human.\"",
+    "msg": "the section's heading starts at 400px, in a block centred on the page with its words on the left, 280px off the page margin (120px), and no other section starts there (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "body-size",
+    "where": "section#try > div.wrap > pre:nth-of-type(1) > span.c:nth-of-type(1) \"# 1. Set up\"",
+    "msg": "31 of 39 paragraphs of running text are set under 16px (14, 15px)",
+    "fix": "set running text at 16px or more",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section.hero / section#what",
+    "msg": "uneven space at the edge of a band: 67px outside its edge, 166px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "header.nav > div.wrap > nav > a:nth-of-type(4) \"Safety\"",
+    "msg": "\"Safety\" opens a section headed \"Why it's safe to let it run\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-length",
+    "where": "section#faq \"FAQ\"",
+    "msg": "10 sections over 90 words a screen outside the UI mocks (\"FAQ\" 325, \"Architecture, layer by l\" 233, \"Measured results — not m\" 163); 126 words a screen across the page (1669 words in 13.2 screens): a tech page says it in about 80 or fewer",
+    "fix": "cut every section to its heading, one line and the product UI: the UI says the rest; no second paragraph, no list of feature sentences",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-current",
+    "where": "header.nav",
+    "msg": "the nav stays on screen with 7 links to the page's sections, but never marks the one you are in (no link changes as the page scrolls)",
+    "fix": "mark the link of the section on screen (a colour, a weight or a line under it) as the visitor scrolls",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "one-screen",
+    "where": "section#what \"What this is\"",
+    "msg": "3 sections are shorter than the screen, so the next one's heading or picture shows with them: \"What this is\" is 521px of the 839px under the nav, and \"How it works, step by step\" shows below it (\"The four agents\", \"Screenshots\")",
+    "fix": "give each section the screen (min-height: 100svh less the nav, its content centred), or join two short ones into one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "empty-area",
+    "where": "section.hero \"AI Multi-Agent Workflow Engine\"",
+    "msg": "37% of the section is empty: 64px above its first content, 80px under its last (p:nth-of-type(2)), 18% beside content that covers under half the container, in its 752px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "skip-link",
+    "where": "header.nav > div.wrap > nav > a:nth-of-type(1) \"How it works\"",
+    "msg": "the first Tab stop is \"How it works\", not a skip link: a keyboard user tabs through the whole nav on every visit",
+    "fix": "add the starter's skip link as the header's first child: <a class=\"skip-link\" href=\"#top\">Skip to content</a>",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "share-meta",
+    "where": "head",
+    "msg": "the head lacks twitter:card, an icon, theme-color: a shared link shows no picture or title of its own",
+    "fix": "copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "container-edges",
+    "where": "div.layers > div.layer:nth-of-type(1) > div:nth-of-type(1) > h3 \"1 · Requests in\"",
+    "msg": "15 text blocks start on a left line at x 141, 21px from the container's left: text starts on the container's left, or on one split line (x 630, 732, 834) (also \"FastAPI\", \"2 · Route and run\", \"LangGraph\") (it is in a scroll scene: told as a WARN) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav",
+    "where": "header.nav > div.wrap > nav > a.btn.primary \"Run it in one command\"",
+    "msg": "the nav is lopsided: its last item ends 6px outside the content's edge (374px), while its first starts on the other edge",
+    "fix": "start the nav's first item and end its last on the content's two edges",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "header.nav > div.wrap > nav > a:nth-of-type(2) \"Live run\"",
+    "msg": "a 53x38px tap target (and 1 more like it on this screen): under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "header.nav > div.wrap > nav > a.btn.primary \"Run it in one command\"",
+    "msg": "a 191x38px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "button#sim-play \"▶ Play the run\"",
+    "msg": "a 146x43px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "button#sim-step \"Run one step\"",
+    "msg": "a 141x43px tap target (and 1 more like it on this screen): under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "div.wrap > div.faq > details:nth-of-type(1) > summary \"What is an “agent” here?\"",
+    "msg": "a 316x26px tap target (and 6 more like it on this screen): under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fold-cut",
+    "where": "div.wrap > div.stats > div:nth-of-type(1) > b \"85.0%\"",
+    "msg": "a line of the hero text is sliced by the bottom of the first screen",
+    "fix": "size the hero so the heading ends above the fold, or starts below it",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fold-cut",
+    "where": "div.wrap > div.stats > div:nth-of-type(2) > b \"100%\"",
+    "msg": "a line of the hero text is sliced by the bottom of the first screen",
+    "fix": "size the hero so the heading ends above the fold, or starts below it",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#how \"How it works, step by step\"",
+    "msg": "pictures, effects and mocks cover 20% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#layers \"Architecture, layer by layer\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#safety \"Why it's safe to let it run\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#evals \"Measured results — not marketing numbers\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#shots \"Screenshots\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "body-size",
+    "where": "div.wrap > div.plain > div.card:nth-of-type(1) > p \"Business teams get the same requests all\"",
+    "msg": "26 of 34 paragraphs of running text are set under 16px (15px)",
+    "fix": "set running text at 16px or more",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "stranded-action",
+    "where": "button#sim-play \"▶ Play the run\"",
+    "msg": "stands 266px down from the nearest text of its block (\"No run yet. Press Play.\") (and 2 more like it: \"Run one step\", \"Reset the run\")",
+    "fix": "put the button under or beside the text it belongs to",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "orphan",
+    "where": "div.layers > div.layer:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(1) \"InvoiceAgent, ReportAgent, DataLookupAge\"",
+    "msg": "its last line holds only \"MCP.\" (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "rebalance the text (text-wrap: pretty, or a shorter line) so the last line holds more than one short word",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fade-cut",
+    "where": "table > tbody > tr:nth-of-type(6) > td:nth-of-type(1) \"Cases needing human approval\"",
+    "msg": "a line of div.card fades out under its edge (\"Cases needing human ap\"): drawn at a fraction of #e8ecf4 on #141b2e, half-erased",
+    "fix": "fit the mock's rows inside its panel (fewer rows, a taller panel), or end the fade below the last whole row: no row half-erased",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-weight",
+    "where": "div.wrap > div.shots > figure:nth-of-type(1) > img \"01-overview.png\"",
+    "msg": "4 photographs are 3x or more wider than drawn on the phone, with no srcset: 01-overview.png is 1440px (194 KB) for a 356px frame; on a phone it arrives late and its frame shows only its ground until then",
+    "fix": "give each photograph srcset and sizes (a 800px and a 1600px file), or a smaller file: the frame never shows empty",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fold-cut",
+    "where": "section.hero > div.wrap > p.lede \"You type a business request in plain Eng\"",
+    "msg": "a line of the hero text is sliced by the bottom of the first screen",
+    "fix": "size the hero so the heading ends above the fold, or starts below it",
+    "widths": [
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fold-cut",
+    "where": "section.hero > div.wrap > p.lede > b:nth-of-type(3) \"tools\"",
+    "msg": "a line of the hero text is sliced by the bottom of the first screen",
+    "fix": "size the hero so the heading ends above the fold, or starts below it",
+    "widths": [
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "div.wrap > div.faq > details:nth-of-type(2) > summary \"What is MCP?\"",
+    "msg": "a 246x26px tap target (and 4 more like it on this screen): under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-em-dash",
+    "msg": "16 em dashes in the body (budget 2)",
+    "fix": "use a comma, a colon, parentheses or a full stop where each is natural (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "(the copy)",
+    "exact": false
+   },
+   {
+    "check": "copy-stat-strip",
+    "msg": "stat strip x3",
+    "fix": "a strip only of figures the brief gives (a price, hours, a count); otherwise put each number in the sentence it proves, or leave it out (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy x3: \"85.0% / 100% / 20 / 0\", \"1 / 2 / 3 / 4 / 5 / 6\", \"20 / 100.0% / 100...",
+    "exact": false
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 177,
+   "layout": 15
+  }
+ },
+ "open": [
+  {
+   "check": "spill",
+   "where": "div.safety > div.card:nth-of-type(1) > p > code:nth-of-type(2) \"interrupt()\"",
+   "msg": "runs 25px past the bottom edge of the panel it sits on (div.safety > div.card:nth-of-type(1) > p > code:nth-of-type(1))",
+   "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "spill"
+   ],
+   "wheres": [
+    "div.safety > div.card:nth-of-type(1) > p > code:nth-of-type(2) \"interrupt()\""
+   ]
+  },
+  {
+   "check": "row-gap",
+   "where": "div#steps > button.step:nth-of-type(5) \"5HITL gate Money moves pause for a human\"",
+   "msg": "fills 50% of its grid row and leaves 51% of it empty on the right",
+   "fix": "fill the row at this width: span the columns, or stack the split",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "row-gap"
+   ],
+   "wheres": [
+    "div#steps > button.step:nth-of-type(5) \"5HITL gate Money moves pause for a human\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#what \"What this is\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#what \"What this is\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#sim \"Watch a workflow run\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#sim \"Watch a workflow run\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#agents \"The four agents\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#agents \"The four agents\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#safety \"Why it's safe to let it run\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#safety \"Why it's safe to let it run\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#evals \"Measured results — not marketing numbers\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#evals \"Measured results — not marketing numbers\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#try \"Run the engine\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#try \"Run the engine\""
+   ]
+  },
+  {
+   "check": "text-only",
+   "where": "section#faq \"FAQ\"",
+   "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+   "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-only"
+   ],
+   "wheres": [
+    "section#faq \"FAQ\""
+   ]
+  },
+  {
+   "check": "card-visual",
+   "where": "section#what > div.wrap > div.plain \"🏢 The problem Business teams get the sa\"",
+   "msg": "3 cards hold only text: no picture, icon, UI fragment or effect in any of them",
+   "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "card-visual"
+   ],
+   "wheres": [
+    "section#what > div.wrap > div.plain \"🏢 The problem Business teams get the sa\""
+   ]
+  },
+  {
+   "check": "card-visual",
+   "where": "div#sim-flow \"INPUT Request “Validate invoice INV-1001\"",
+   "msg": "7 cards hold only text: no picture, icon, UI fragment or effect in any of them",
+   "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "card-visual"
+   ],
+   "wheres": [
+    "div#sim-flow \"INPUT Request “Validate invoice INV-1001\""
+   ]
+  },
+  {
+   "check": "card-visual",
+   "where": "section#layers > div.wrap > div.layers \"1 · Requests in FastAPI HTTP API and the\"",
+   "msg": "5 cards hold only text: no picture, icon, UI fragment or effect in any of them",
+   "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "card-visual"
+   ],
+   "wheres": [
+    "section#layers > div.wrap > div.layers \"1 · Requests in FastAPI HTTP API and the\""
+   ]
+  },
+  {
+   "check": "card-visual",
+   "where": "section#agents > div.wrap > div.agents \"🧾 InvoiceAgent Invoice intake and valid\"",
+   "msg": "4 cards hold only text: no picture, icon, UI fragment or effect in any of them",
+   "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "card-visual"
+   ],
+   "wheres": [
+    "section#agents > div.wrap > div.agents \"🧾 InvoiceAgent Invoice intake and valid\""
+   ]
+  },
+  {
+   "check": "card-visual",
+   "where": "section#safety > div.wrap > div.safety \"✋ Human-in-the-loop, by construction A f\"",
+   "msg": "3 cards hold only text: no picture, icon, UI fragment or effect in any of them",
+   "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "card-visual"
+   ],
+   "wheres": [
+    "section#safety > div.wrap > div.safety \"✋ Human-in-the-loop, by construction A f\""
+   ]
+  },
+  {
+   "check": "card-layout",
+   "where": "section#shots > div.wrap > div.shots",
+   "msg": "5 of 5 cards drawn one way (one panel, ground, placement and fragment): copies of one card",
+   "fix": "a card layout at most twice on a page: build the other sections another way",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "card-layout"
+   ],
+   "wheres": [
+    "section#shots > div.wrap > div.shots"
+   ]
+  },
+  {
+   "check": "button-styles",
+   "where": "(one screen)",
+   "msg": "4 button styles on one screen: soft, fill #141b2e, outline #2a3550 (\"Run one step\"); soft, fill #1d6fb8 (\"▶ Play the run\"); soft, fill #34d399 (\"Approve and execute\"); soft, outline #f87171 (\"Reject the payment\"); the odd ones out: \"Approve and execute\", \"Reject the payment\"",
+   "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "button-styles"
+   ],
+   "wheres": [
+    "(one screen)"
+   ]
+  },
+  {
+   "check": "button-styles",
+   "where": "(the page)",
+   "msg": "5 button styles on the page: soft, fill #1d6fb8 x2 (\"Run it in one command →\"); soft, fill #141b2e, outline #2a3550 x4 (\"View on GitHub\"); soft, fill #12203a, outline #22d3ee x1 (\"Validate invoice INV-1001\"); soft, fill #34d399 x1 (\"Approve and execute\"); soft, outline #f87171 x1 (\"Reject the payment\")",
+   "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "button-styles"
+   ],
+   "wheres": [
+    "(the page)"
+   ]
+  },
+  {
+   "check": "button-styles",
+   "where": "section.hero > div.wrap > div.cta > a.btn.primary \"Run it in one command →\"",
+   "msg": "one button style (soft, fill #1d6fb8) in 2 heights: 43, 50px (\"Run it in one command →\" 50px, \"▶ Play the run\" 43px)",
+   "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "button-styles"
+   ],
+   "wheres": [
+    "section.hero > div.wrap > div.cta > a.btn.primary \"Run it in one command →\""
+   ]
+  },
+  {
+   "check": "button-styles",
+   "where": "section.hero > div.wrap > div.cta > a.btn:nth-of-type(2) \"View on GitHub\"",
+   "msg": "one button style (soft, fill #141b2e, outline #2a3550) in 3 heights: 43, 47, 50px (\"View on GitHub\" 50px, \"Run one step\" 43px)",
+   "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "button-styles"
+   ],
+   "wheres": [
+    "section.hero > div.wrap > div.cta > a.btn:nth-of-type(2) \"View on GitHub\""
+   ]
+  },
+  {
+   "check": "cta",
+   "where": "section#faq \"FAQ\"",
+   "msg": "the last section before the footer ends with no button",
+   "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "cta"
+   ],
+   "wheres": [
+    "section#faq \"FAQ\""
+   ]
+  },
+  {
+   "check": "copy-headings",
+   "where": "section#what > div.wrap > h2 \"What this is\"",
+   "msg": "\"What this is\" names no product, part, place or section (5 headings like it; at most one brand line per page) (and 4 more like it: \"Architecture, layer by l\", \"Why it's safe to let it \", \"Money waits for a human.\", \"Screenshots\")",
+   "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headings"
+   ],
+   "wheres": [
+    "section#what > div.wrap > h2 \"What this is\""
+   ]
+  },
+  {
+   "check": "contrast",
+   "where": "header.nav > div.wrap > div.logo \"◈\"",
+   "msg": "body text over a effect reads at 1.9:1 at its worst tenth (needs 4.5:1) (and 6 more like it: \"1\", \"2\", \"3\", \"4\", ...)",
+   "fix": "put the text on a calm part of the picture, or on a solid panel",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "contrast"
+   ],
+   "wheres": [
+    "header.nav > div.wrap > div.logo \"◈\""
+   ]
+  },
+  {
+   "check": "text-contrast",
+   "where": "div#sim-node-agents > div > div.sim-chips > span.sim-chip:nth-of-type(1) \"InvoiceAgent\"",
+   "msg": "a caption, label or muted line in #4c5668 on #0d1322 reads 2.5:1 (needs 4.5:1); 9 like it, like \"ReportAgent\", \"DataLookupAgent\", \"PolicyAgent\"",
+   "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-contrast"
+   ],
+   "wheres": [
+    "div#sim-node-agents > div > div.sim-chips > span.sim-chip:nth-of-type(1) \"InvoiceAgent\""
+   ]
+  },
+  {
+   "check": "text-contrast",
+   "where": "section#try > div.wrap > pre:nth-of-type(1) > span.c:nth-of-type(1) \"# 1. Set up\"",
+   "msg": "body text in #5b6b8c on #0d1220 reads 3.49:1 (needs 7:1); 5 like it, like \"# 3. Open http://127.0\", \"# \"Validate invoice IN\", \"# \"Approve payment for\"",
+   "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-contrast"
+   ],
+   "wheres": [
+    "section#try > div.wrap > pre:nth-of-type(1) > span.c:nth-of-type(1) \"# 1. Set up\""
+   ]
+  },
+  {
+   "check": "text-contrast",
+   "where": "section#try > div.wrap > pre:nth-of-type(1) > span.c:nth-of-type(2) \"# 2. Run\"",
+   "msg": "a caption, label or muted line in #5b6b8c on #0d1220 reads 3.49:1 (needs 4.5:1)",
+   "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-contrast"
+   ],
+   "wheres": [
+    "section#try > div.wrap > pre:nth-of-type(1) > span.c:nth-of-type(2) \"# 2. Run\""
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section.hero / section#what",
+   "msg": "233px between these sections, +77% against the median 132px of gaps at a change of ground",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section.hero / section#what"
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#sim / section#layers",
+   "msg": "459px between these sections, +248% against the median 132px",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#sim / section#layers"
+   ]
+  },
+  {
+   "check": "section-tile",
+   "where": "section#try \"Run the engine\"",
+   "msg": "the section is 796px tall (0.88 screens at 1440x900), shorter than the screen: its tile (the screen from its top) shows 736px of it and 103px of the next section, its heading \"Screenshots\" on screen",
+   "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-tile"
+   ],
+   "wheres": [
+    "section#try \"Run the engine\""
+   ]
+  },
+  {
+   "check": "section-tile",
+   "where": "section#faq \"FAQ\"",
+   "msg": "the section is 673px tall (0.75 screens at 1440x900), shorter than the screen: its tile, held at the page's end (scroll 9537px) shows 673px of it and 141px of the next section (\"AI Multi-Agent Workflow Engine\"), its text \"AI Multi-Agent Workflow Engine\" on screen",
+   "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-tile"
+   ],
+   "wheres": [
+    "section#faq \"FAQ\""
+   ]
+  },
+  {
+   "check": "hero-screen",
+   "where": "section.hero \"LangGraph · FastAPI · MCP AI Multi-Agent\"",
+   "msg": "the hero ends at 961px on a 900px screen, 61px below the fold: it ends at the fold, 1px either way (SR-1)",
+   "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "hero-screen"
+   ],
+   "wheres": [
+    "section.hero \"LangGraph · FastAPI · MCP AI Multi-Agent\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#agents \"The four agents Each agent owns one kind\"",
+   "msg": "the section is 497px tall (0.6 screens), 403px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "section#agents \"The four agents Each agent owns one kind\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#what \"What this is No jargon needed. Here is t\"",
+   "msg": "the section is 521px tall (0.6 screens), 379px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 7 more like it: \"Why it's safe to let it \", \"FAQ What is an “agent” h\", \"How it works, step by st\") (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "section#what \"What this is No jargon needed. Here is t\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#how \"How it works, step by step The animation\"",
+   "msg": "the section starts at 1482px, 318px above the screen grid (2 x 900px): sections start on whole screens (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "section#how \"How it works, step by step The animation\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#safety \"Why it's safe to let it run Three mechan\"",
+   "msg": "the section starts at 5715px, 315px below the screen grid (6 x 900px): sections start on whole screens (and 10 more like it: \"FAQ What is an “agent” h\", \"The four agents Each age\", \"Watch a workflow run Pic\") (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "section#safety \"Why it's safe to let it run Three mechan\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#shots \"Screenshots Real screenshots of the runn\"",
+   "msg": "the section's content does not fit it: its lowest content ends 682px below its top, past 675px (the section less 72px of bottom padding) (and 1 more like it: \"Run the engine One comma\") (SR-2)",
+   "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "section#shots \"Screenshots Real screenshots of the runn\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section#safety > div.wrap > h2 \"Why it's safe to let it run\"",
+   "msg": "the screen at scroll 5218px (the top of section 6) shows 403px of section 7 and the heading of section 7 whole and the content of 2 sections, over 24px each beside section 6: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "section#safety > div.wrap > h2 \"Why it's safe to let it run\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section#how > div.wrap > h2 \"How it works, step by step\"",
+   "msg": "the screen at scroll 961px (the top of section 2) shows 379px of section 3 and the heading of section 3 whole and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "section#how > div.wrap > h2 \"How it works, step by step\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "div#step-detail \"1 · Request — You type a request in plai\"",
+   "msg": "a band: a box 83% of the section wide on a ground of its own that holds only text: the section's own ground is the band (SR-4)",
+   "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "div#step-detail \"1 · Request — You type a request in plai\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "div#sim-panel \"InputRequest “Validate invoice INV-1001”\"",
+   "msg": "a band: a box 83% of the section wide on a ground of its own that holds only text: the section's own ground is the band (SR-4)",
+   "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "div#sim-panel \"InputRequest “Validate invoice INV-1001”\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section#layers > div.wrap > div.layers > div.layer:nth-of-type(1) \"1 · Requests inFastAPI HTTP API and the \"",
+   "msg": "a band: a box 83% of the section wide on a ground of its own that holds only text: the section's own ground is the band (and 12 more like it: \"2 · Route and runLangGra\", \"3 · SpecialistsDomain ag\", \"4 · Tools and memoryFast\") (SR-4)",
+   "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "section#layers > div.wrap > div.layers > div.layer:nth-of-type(1) \"1 · Requests inFastAPI HTTP API and the \""
+   ]
+  },
+  {
+   "check": "one-heading",
+   "where": "section#how > div.wrap > h2 \"How it works, step by step\"",
+   "msg": "headings of two sections show whole on one screen at 17 of 191 scroll positions (8.9%; at scroll 700, 750, 800, 850px), here with \"What this is\": at most 3% on a desktop (SR-5)",
+   "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-heading"
+   ],
+   "wheres": [
+    "section#how > div.wrap > h2 \"How it works, step by step\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "section.statement.mo-la \"Money waits for a human. A payment canno\"",
+   "msg": "the content of section 8 runs 400px from the left and 400px from the right: the page's container starts at 120px; the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)",
+   "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "section.statement.mo-la \"Money waits for a human. A payment canno\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "header.nav \"◈ AI Multi-Agent Workflow Engine How it \"",
+   "msg": "the nav's first box starts at 130px and its last ends at 1320px, not on its .wrap at 120-1320px (SR-6)",
+   "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "header.nav \"◈ AI Multi-Agent Workflow Engine How it \""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "section.hero \"LangGraph · FastAPI · MCP AI Multi-Agent\"",
+   "msg": "a <section> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "section.hero \"LangGraph · FastAPI · MCP AI Multi-Agent\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "section#what \"What this is No jargon needed. Here is t\"",
+   "msg": "a <section> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "section#what \"What this is No jargon needed. Here is t\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "section#how \"How it works, step by step The animation\"",
+   "msg": "a <section> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (and 10 more like it: \"Watch a workflow run Pic\", \"Architecture, layer by l\", \"The four agents Each age\") (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "section#how \"How it works, step by step The animation\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div#sim-node-agents > div > div.sim-chips > span.sim-chip:nth-of-type(1) \"InvoiceAgent\"",
+   "msg": "3 text blocks start on a left line at x 188, 68px from the container's left: text starts on the container's left, or on one split line (x 630, 732, 834) (also \"lookup_invoice\", \"1 · Reserve funds\") (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div#sim-node-agents > div > div.sim-chips > span.sim-chip:nth-of-type(1) \"InvoiceAgent\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div#sim-node-request > div > h3 \"Request\"",
+   "msg": "14 text blocks start on a left line at x 176, 56px from the container's left: text starts on the container's left, or on one split line (x 630, 732, 834) (also \"“Validate invoice INV-1001”\", \"Router\", \"Reads the request and picks an i\") (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div#sim-node-request > div > h3 \"Request\""
+   ]
+  },
+  {
+   "check": "row-lines",
+   "where": "section#shots > div.wrap > div.shots",
+   "msg": "a row of 2 items: its last item ends at 915px, the container's right line at 1320px (2px either way) (SR-7)",
+   "fix": "start the row's first item on the container's left line and end its last on the right line, every item one height",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "row-lines"
+   ],
+   "wheres": [
+    "section#shots > div.wrap > div.shots"
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "div#sim-panel > div.sim-grid \"InputRequest “Validate invoice INV-1001”\"",
+   "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 831, on none of the split lines 630 (k=5), 732 (k=6), 834 (k=7) (SR-8)",
+   "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "div#sim-panel > div.sim-grid \"InputRequest “Validate invoice INV-1001”\""
+   ]
+  },
+  {
+   "check": "spill",
+   "where": "section#try > div.wrap > p:nth-of-type(4) > code:nth-of-type(4) \"GET /api/metrics\"",
+   "msg": "runs 26px past the bottom edge of the panel it sits on (section#try > div.wrap > p:nth-of-type(4) > code:nth-of-type(3))",
+   "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "spill"
+   ],
+   "wheres": [
+    "section#try > div.wrap > p:nth-of-type(4) > code:nth-of-type(4) \"GET /api/metrics\""
+   ]
+  },
+  {
+   "check": "tap-size",
+   "where": "div.wrap > div.faq > details:nth-of-type(1) > summary \"What is an “agent” here?\"",
+   "msg": "a 246x26px tap target: 0px from the next one (\"Live run\"), so a thumb lands on the wrong one",
+   "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "tap-size"
+   ],
+   "wheres": [
+    "div.wrap > div.faq > details:nth-of-type(1) > summary \"What is an “agent” here?\""
+   ]
+  }
+ ],
+ "waived": [
+  {
+   "check": "section-height",
+   "where": "footer.closing \"AI Multi-Agent Workflow Engine · Built w\"",
+   "msg": "the section is 141px tall (0.2 screens), 759px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "footer.closing \"AI Multi-Agent Workflow Engine · Built w\""
+   ],
+   "reason": "the footer is not a section: it holds two lines of credits and links, and making it a full screen would be empty space a visitor must scroll past"
+  }
+ ],
+ "warnCount": 37,
+ "at": "2026-11-11T19:44:12.490Z",
+ "openTold": true
+}

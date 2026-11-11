@@ -1,8 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-type="software">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="page-type" content="software">
+<meta name="site-kind" content="software">
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/letters-assemble/moment.js">
+<link rel="modulepreload" href="assets/moments/line-carries-colour/moment.js">
 <title>AI Multi-Agent Workflow Engine — Router, agents, MCP tools, human-in-the-loop</title>
 <meta name="description" content="A multi-agent workflow engine for business operations: one router, four specialist agents, every tool through MCP, and a human approves every money move.">
 <meta property="og:title" content="AI Multi-Agent Workflow Engine">
@@ -12,31 +20,33 @@
 </head>
 <body>
 
-<header>
+<header class="nav">
   <div class="wrap">
     <div class="logo">◈</div>
     <div class="name">AI Multi-Agent Workflow Engine</div>
     <nav>
       <a href="#how">How it works</a>
+      <a href="#sim">Live run</a>
       <a href="#agents">Agents</a>
       <a href="#safety">Safety</a>
       <a href="#evals">Results</a>
-      <a href="#try">Try it</a>
+      <a href="#try">Run the engine</a>
       <a href="#faq">FAQ</a>
+      <a class="btn primary nav-cta" href="#try">Run it in one command</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" data-enter aria-labelledby="hero-h">
   <div class="wrap">
-    <span class="badge">LangGraph · FastAPI · MCP</span>
-    <h1>AI Multi-Agent<br><span>Workflow Engine</span></h1>
-    <p class="lede">You type a business request in plain English. A <b>router</b> figures out what kind of job it is, sends it to the right <b>specialist agent</b>, and that agent does the work using a shared set of <b>tools</b>. If the job involves money, everything <b>stops and waits for a human</b> before anything is paid. That is the whole idea.</p>
-    <div class="cta">
+    <span class="badge" data-enter-item="1">LangGraph · FastAPI · MCP</span>
+    <h1 id="hero-h" data-enter-item="2">AI Multi-Agent<br><span>Workflow Engine</span></h1>
+    <p class="lede" data-enter-item="3">You type a business request in plain English. A <b>router</b> figures out what kind of job it is, sends it to the right <b>specialist agent</b>, and that agent does the work using a shared set of <b>tools</b>. If the job involves money, everything <b>stops and waits for a human</b> before anything is paid. That is the whole idea.</p>
+    <div class="cta" data-enter-item="4">
       <a class="btn primary" href="#try">Run it in one command →</a>
       <a class="btn" href="https://github.com/ProNoob-Dev/ai-multi-agent-workflow-engine">View on GitHub</a>
     </div>
-    <div class="stats">
+    <div class="stats" data-enter-item="5">
       <div><b>85.0%</b> autonomous resolution*</div>
       <div><b>100%</b> routing accuracy*</div>
       <div><b>20</b> golden-set eval cases</div>
@@ -48,7 +58,7 @@
 
 <section id="what">
   <div class="wrap">
-    <h2>What is this, in plain English?</h2>
+    <h2>What this is</h2>
     <p class="sub">No jargon needed. Here is the idea in three sentences.</p>
     <div class="plain">
       <div class="card">
@@ -80,7 +90,7 @@
       <svg id="flow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" role="img" aria-label="Workflow diagram: request flows from router to domain agents, through MCP tools, pauses at the human gate, and reaches a result">
         <defs>
           <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stop-color="#7c5cff"/><stop offset="0.55" stop-color="#38bdf8"/><stop offset="1" stop-color="#22d3ee"/>
+            <stop offset="0" stop-color="#38bdf8"/><stop offset="0.55" stop-color="#38bdf8"/><stop offset="1" stop-color="#22d3ee"/>
           </linearGradient>
           <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/></marker>
           <marker id="arrowAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/></marker>
@@ -109,7 +119,7 @@
             <text x="115" y="242" font-size="12.5" fill="#8b98ad">a business question</text>
           </g>
           <g class="node" id="node-router">
-            <rect class="node-rect" x="226" y="185" width="150" height="80" rx="14" fill="#141b2e" stroke="#7c5cff" stroke-width="2"/>
+            <rect class="node-rect" x="226" y="185" width="150" height="80" rx="14" fill="#141b2e" stroke="#38bdf8" stroke-width="2"/>
             <text x="301" y="218" font-size="17" font-weight="700" fill="#e8ecf4">Router</text>
             <text x="301" y="242" font-size="12.5" fill="#8b98ad">classifies intent</text>
           </g>
@@ -189,6 +199,125 @@
   </div>
 </section>
 
+<section id="sim" class="alt">
+  <div class="wrap">
+    <h2>Watch a workflow run</h2>
+    <p class="sub">Pick a request, press Play, and watch it move. The dot is the request. A station lights up only while it is working. When money is involved, the flow stops at the human gate and waits for you.</p>
+
+    <div class="sim-scenarios" role="group" aria-label="Pick a request">
+      <button class="sim-scenario active" data-scenario="validate">Validate invoice INV-1001</button>
+      <button class="sim-scenario" data-scenario="approve">Approve payment for INV-1003</button>
+      <button class="sim-scenario" data-scenario="approve-fail">Approve payment for INV-1003, notify step fails</button>
+    </div>
+
+    <p class="sim-narration" id="sim-narration" aria-live="polite">Press Play to run the request through the engine.</p>
+
+    <div class="sim-panel" id="sim-panel">
+      <div class="sim-grid">
+        <div class="sim-flow" id="sim-flow">
+          <div class="sim-particle" id="sim-particle" aria-hidden="true"></div>
+
+          <div class="sim-station" id="sim-node-request">
+            <div><span class="tech">Input</span><h3>Request</h3>
+            <p class="sim-note" id="sim-request-text">“Validate invoice INV-1001”</p></div>
+          </div>
+
+          <div class="sim-station" id="sim-node-router">
+            <div><span class="tech">LangGraph</span><h3>Router</h3>
+            <p class="sim-note" id="sim-router-note">Reads the request and picks an intent.</p></div>
+          </div>
+
+          <div class="sim-station" id="sim-node-agents">
+            <div><span class="tech">LangGraph nodes</span><h3>Domain agents</h3>
+            <p class="sim-note">One specialist takes the job. The others stay dark.</p>
+            <div class="sim-chips">
+              <span class="sim-chip" data-agent="InvoiceAgent">InvoiceAgent</span>
+              <span class="sim-chip" data-agent="ReportAgent">ReportAgent</span>
+              <span class="sim-chip" data-agent="DataLookupAgent">DataLookupAgent</span>
+              <span class="sim-chip" data-agent="PolicyAgent">PolicyAgent</span>
+            </div></div>
+          </div>
+
+          <div class="sim-station" id="sim-node-mcp">
+            <div><span class="tech">FastMCP · /mcp</span><h3>MCP tools</h3>
+            <p class="sim-note">Agents never touch data. Every call goes through this toolbox.</p>
+            <div class="sim-chips" id="sim-tools"></div></div>
+          </div>
+
+          <div class="sim-station" id="sim-node-hitl">
+            <div><span class="tech">LangGraph interrupt()</span><h3>Human gate</h3>
+            <p class="sim-note" id="sim-hitl-note">Money moves stop here. Nothing is paid without a human.</p>
+            <div class="sim-gate-actions">
+              <button class="btn approve" id="sim-approve" disabled>Approve and execute</button>
+              <button class="btn reject" id="sim-reject" disabled>Reject the payment</button>
+            </div></div>
+          </div>
+
+          <div class="sim-station" id="sim-node-saga">
+            <div><span class="tech">Compensating saga</span><h3>Payment steps</h3>
+            <p class="sim-note">Three steps, each with its own undo. A failure runs the undos in reverse.</p>
+            <div class="sim-chips">
+              <span class="sim-chip" data-saga="reserve">1 · Reserve funds</span>
+              <span class="sim-chip" data-saga="ledger">2 · Post ledger entry</span>
+              <span class="sim-chip" data-saga="notify">3 · Notify vendor</span>
+            </div></div>
+          </div>
+
+          <div class="sim-station" id="sim-node-result">
+            <div><span class="tech">Result</span><h3 id="sim-result-title">Result</h3>
+            <p class="sim-note" id="sim-result-note">Answer, citations, trace, cost.</p></div>
+          </div>
+        </div>
+
+        <div class="sim-trace" id="sim-trace">
+          <p class="sim-trace-title">Trace · Langfuse</p>
+          <ol id="sim-trace-list"><li class="t-empty">No run yet. Press Play.</li></ol>
+        </div>
+      </div>
+
+      <div class="sim-controls" style="margin-top: 16px;">
+        <button class="btn primary" id="sim-play">▶ Play the run</button>
+        <button class="btn" id="sim-step">Run one step</button>
+        <button class="btn" id="sim-reset">Reset the run</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="layers" data-moment="line-carries-colour" data-moment-opts='{"from": "base"}'>
+  <div class="wrap">
+    <h2>Architecture, layer by layer</h2>
+    <p class="sub">Five layers. Each one does one job, and each one can be swapped without touching the others. Hover a layer for why it is there.</p>
+    <div class="layers">
+      <div class="layer" tabindex="0">
+        <div><h3>1 · Requests in</h3><p class="tech">FastAPI</p></div>
+        <div><p>HTTP API and the dashboard. A request arrives as JSON, the answer leaves as JSON with citations and a trace.</p>
+        <p class="why">Why: one front door. The engine behind it can change without changing the API.</p></div>
+      </div>
+      <div class="layer" tabindex="0">
+        <div><h3>2 · Route and run</h3><p class="tech">LangGraph</p></div>
+        <div><p>The router classifies the request, the graph runs the agents as nodes, and state is checkpointed after every step.</p>
+        <p class="why">Why: the workflow is a graph, so its state is visible, pausable and resumable.</p></div>
+      </div>
+      <div class="layer" tabindex="0">
+        <div><h3>3 · Specialists</h3><p class="tech">Domain agents</p></div>
+        <div><p>InvoiceAgent, ReportAgent, DataLookupAgent, PolicyAgent. Each owns one kind of work and calls tools through MCP.</p>
+        <p class="why">Why: one job per agent makes each one easy to test, easy to trust and easy to replace.</p></div>
+      </div>
+      <div class="layer" tabindex="0">
+        <div><h3>4 · Tools and memory</h3><p class="tech">FastMCP · PostgreSQL · SQLite · Qdrant</p></div>
+        <div><p>Every data access flows through the MCP tool server. Checkpoints live in Postgres, or SQLite when no database is set.</p>
+        <p class="why">Why: agents never touch data directly, so every access is logged in one place, and a killed run resumes exactly once.</p></div>
+      </div>
+      <div class="layer" tabindex="0">
+        <div><h3>5 · Proof</h3><p class="tech">OpenTelemetry · Langfuse · Eval harness</p></div>
+        <div><p>Every run leaves a trace with latency, tokens and cost. The eval harness scores a 20-case golden set and reports the measured rate.</p>
+        <p class="why">Why: the numbers on this page come from the repo's own eval run.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="agents">
   <div class="wrap">
     <h2>The four agents</h2>
@@ -201,7 +330,7 @@
       </div>
       <div class="card agent">
         <h3>📊 ReportAgent</h3>
-        <p>Report generation from real figures: totals, pending counts, overdue amounts, per-vendor breakdowns — drafted from the ledger, not invented.</p>
+        <p>Report generation from real figures: totals, pending counts, overdue amounts, per-vendor breakdowns — drafted from the ledger.</p>
         <p><code>draft_report</code> · <code>get_ledger</code></p>
       </div>
       <div class="card agent">
@@ -211,7 +340,7 @@
       </div>
       <div class="card agent">
         <h3>📖 PolicyAgent</h3>
-        <p>Policy and handbook Q&amp;A with retrieval over seeded documents (expense, leave, procurement, travel). Returns the matching section, not a guess.</p>
+        <p>Policy and handbook Q&amp;A with retrieval over seeded documents (expense, leave, procurement, travel). Returns the matching section.</p>
         <p><code>search_policy</code></p>
       </div>
     </div>
@@ -221,7 +350,7 @@
 <section id="safety" class="alt">
   <div class="wrap">
     <h2>Why it's safe to let it run</h2>
-    <p class="sub">Three mechanisms do the heavy lifting. They are enforced in code, not just documented.</p>
+    <p class="sub">Three mechanisms do the heavy lifting. They are enforced in code.</p>
     <div class="safety">
       <div class="card">
         <div class="icon">✋</div>
@@ -239,6 +368,13 @@
         <p>Like a save point in a video game. State is checkpointed after every step (Postgres when <code>DATABASE_URL</code> is set, SQLite otherwise). Kill the process mid-payment and restart it — the run resumes from the checkpoint and the payment is applied exactly once.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="statement" data-moment="letters-assemble">
+  <div class="wrap">
+    <h2 class="mo-la__type">Money waits for a human.</h2>
+    <p class="mo-la__sub">A payment cannot move until someone clicks Approve. That rule sits in the code.</p>
   </div>
 </section>
 
@@ -268,7 +404,7 @@
 
 <section id="try" class="alt">
   <div class="wrap">
-    <h2>Try it</h2>
+    <h2>Run the engine</h2>
     <p class="sub">One command. No keys needed — the mock LLM provider is the default, so everything runs offline and deterministically.</p>
 <pre><span class="c"># 1. Set up</span>
 python -m venv .venv && source .venv/bin/activate
@@ -294,11 +430,11 @@ python -m app.eval</pre>
     <h2>Screenshots</h2>
     <p class="sub">Real screenshots of the running dashboard — not mockups.</p>
     <div class="shots">
-      <figure><img src="screenshots/01-overview.png" alt="Dashboard overview with metrics cards and run form"><figcaption><b>Overview</b> — live metrics, run form, how-it-works flow.</figcaption></figure>
-      <figure><img src="screenshots/02-run-detail.png" alt="Run timeline with a run detail showing steps and trace"><figcaption><b>Run timeline</b> — every run traced, click a row for the full detail.</figcaption></figure>
-      <figure><img src="screenshots/03-review-queue.png" alt="Human review queue with a payment awaiting approval"><figcaption><b>Review queue</b> — financial actions wait here for a human.</figcaption></figure>
-      <figure><img src="screenshots/04-approval-paused.png" alt="A payment run paused at the human gate, showing the financial action and trace"><figcaption><b>Approval paused</b> — a payment waiting for a human, with its full trace.</figcaption></figure>
-      <figure><img src="screenshots/05-evals.png" alt="Eval panel showing measured results"><figcaption><b>Evals</b> — the measured golden-set results in the dashboard.</figcaption></figure>
+      <figure><img src="screenshots/01-overview.png" alt="Dashboard overview with metrics cards and run form"></figure>
+      <figure><img src="screenshots/02-run-detail.png" alt="Run timeline with a run detail showing steps and trace"></figure>
+      <figure><img src="screenshots/03-review-queue.png" alt="Human review queue with a payment awaiting approval"></figure>
+      <figure><img src="screenshots/04-approval-paused.png" alt="A payment run paused at the human gate, showing the financial action and trace"></figure>
+      <figure><img src="screenshots/05-evals.png" alt="Eval panel showing measured results"></figure>
     </div>
   </div>
 </section>
@@ -339,7 +475,7 @@ python -m app.eval</pre>
   </div>
 </section>
 
-<footer>
+<footer class="closing">
   <div class="wrap">
     <p>AI Multi-Agent Workflow Engine · Built with LangGraph, FastMCP and FastAPI · MIT License</p>
     <p>© 2026 <a href="https://github.com/ProNoob-Dev">Jaikishan Bagul</a> · <a href="https://github.com/ProNoob-Dev/ai-multi-agent-workflow-engine">GitHub repo</a></p>
@@ -347,5 +483,7 @@ python -m app.eval</pre>
 </footer>
 
 <script src="assets/script.js"></script>
+<script src="assets/sim.js"></script>
+<script type="module" src="assets/moments/moments.js"></script>
 </body>
 </html>

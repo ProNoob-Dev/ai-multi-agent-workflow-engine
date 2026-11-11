@@ -10,3 +10,13 @@ data/checkpoints.db-shm
 data/checkpoints.db-wal
 .DS_Store
 .env
+
+# taste-skill check artifacts (Chrome profiles, probe screenshots)
+.taste-skill/chrome-*
+.taste-skill/chrome-check/
+.taste-skill/gate/consistency/*.jpg
+.taste-skill/gate/consistency/rendered.html
+.taste-skill/layout-history.json
+.taste-skill/build.done.json
+
+docs/.taste-skill/
